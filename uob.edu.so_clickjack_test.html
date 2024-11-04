@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="so">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 20px 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+        h2 {
+            color: #333;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background-color: #5a67d8;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #434190;
+        }
+        p {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #777;
+        }
+        iframe {
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form action="dashboard.html" method="POST" onsubmit="return handleLogin(event)">
+            <input type="text" id="username" placeholder="Username" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <input type="submit" value="Login">
+        </form>
+        <p>Fadlan geli username iyo password-kaaga si aad u gasho</p>
+        <iframe src="https://uob.edu.so/" title="Website" width="100%" height="300"></iframe>
+    </div>
+
+    <script>
+        function handleLogin(event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            
+            if (username === "yourUsername" && password === "yourPassword") {
+                alert("Login successful!");
+                window.location.href = "dashboard.html";  // Meelaha dashboard-ka ku xiran
+            } else {
+                alert("Username ama Password waa khaldan yahay!");
+            }
+        }
+    </script>
+</body>
+</html>
+
